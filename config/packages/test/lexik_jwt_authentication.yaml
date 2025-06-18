@@ -1,0 +1,10 @@
+# config/packages/test/lexik_jwt_authentication.yaml
+lexik_jwt_authentication:
+    # Podajemy ścieżki do kluczy bezpośrednio, omijając .env
+    secret_key: '%kernel.project_dir%/config/jwt/private.pem'
+    public_key: '%kernel.project_dir%/config/jwt/public.pem'
+    
+    # TUTAJ WKLEJ SWOJE HASŁO Z PLIKU .ENV
+    # Jeśli w .env masz JWT_PASSPHRASE=d022e93... to wklej ten ciąg znaków tutaj.
+    # Jeśli w .env zostawiłeś puste, wklej dwa apostrofy: ''
+    pass_phrase: 'd022e93c6889b29fe00787ef09702e8ac5621b6103b5493cb190dbfd75bb5829'
