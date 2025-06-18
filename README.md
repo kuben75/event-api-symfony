@@ -125,3 +125,5 @@ This command removes a specific role from a user.
 ```bash
 docker compose exec php php bin/console app:user:revoke-role <user_email> <role>
 ```
+## Author
+* Jakub Ławniczak (28198)
