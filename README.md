@@ -28,31 +28,31 @@ This is a RESTful API backend for managing events, participants, and the registr
     ```
     Navigate into the project directory before proceeding to the next steps.
     
-3.  **Build and run the Docker containers:**
+2.  **Build and run the Docker containers:**
     (Run this command in a terminal inside the project directory)
     ```bash
     docker-compose up --pull always -d --wait
     ```
 
-4.  **Install Composer dependencies:**
+3.  **Install Composer dependencies:**
     (Run this command in a terminal inside the project directory)
     ```bash
     docker compose exec php composer install
     ```
 
-5.  **Run database migrations:**
+4.  **Run database migrations:**
     (Run this command in a terminal inside the project directory)
     ```bash
     docker compose exec php php bin/console doctrine:migrations:migrate --no-interaction
     ```
 
-6.  **Load fixture data:**
+5.  **Load fixture data:**
     (Run this command in a terminal inside the project directory)
     ```bash
     docker compose exec php php bin/console doctrine:fixtures:load --no-interaction
     ```
     
-7.  Generate JWT keys: (This crucial step is required for the login system to work)
+6.  Generate JWT keys: (This crucial step is required for the login system to work)
    ```bash
     docker compose exec php php bin/console lexik:jwt:generate-keypair
    ```
